@@ -2,6 +2,7 @@
 flex:1 0 auto;
 display: flex;
 justify-content: center;
+
 padding: 50px 100px;
 }
 .Main_container{
@@ -10,14 +11,19 @@ padding: 50px 100px;
      justify-content: space-between;
     align-items: center;
     text-align: center;
+    width:780px;
+    height: 100%;
 
 }
 .Main_List{
 display: flex;
 flex-direction: column;
-gap: 15px;
 
 }
+.currency_row{
+
+}
+
 
 .Main_buttons{
     display: flex;
