@@ -42,7 +42,6 @@ const Main = () => {
       )
     );
   }, []);
-  useEffect(() => {}, [newData.data, page]);
   useEffect(() => {
     setThisPage(
       newData.data.slice(page, 10 + page).map((item) => {
