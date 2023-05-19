@@ -2,6 +2,7 @@ import "./Main.scss";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import { useEffect, useState } from "react";
+import { API_KEY } from "../../constants";
 //@ts-ignore
 import { v4 as uuidv4 } from "uuid";
 import TableCell from "@mui/material/TableCell";
@@ -37,7 +38,7 @@ const Main = () => {
   useEffect(() => {
     dispatch(
       getData(
-        "https://api.iex.cloud/v1/data/CORE/HISTORICAL_PRICES/aapl,fb,googl,amzn,msft,nflx,twtr,tsla,brk.b,jpm,ba,wmt,ma,v,pg,dis,c,hd,unh,ko,pep,pfe,axp,nke,mcd,mmm,mrk,ba,cvx,cat,ge,jnj,ibm,orcl,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba,ba?token=sk_edd20de2d9be43fcbef97407d7e9b2ba"
+        `https://api.iex.cloud/v1/data/CORE/HISTORICAL_PRICES/AAPL,MSFT,GOOGL,AMZN,FB,TSLA,NFLX,JPM,JNJ,XOM,BRK.A,BABA,V,NVDA,BAC,UNH,HD,CVX,PFE,WMT,DIS,MA,INTC,ADBE,CRM,ABT,ORCL,NKE,KO,TMUS,CMCSA,TGT,PEP,MCD,NVAX,MRNA,AMD,GS,UNP,BA,FISV,MMM,NOC,BMY,LOW,CAT,UPS,IBM,GSX,SLB,FDX,DUK,MO,CI,AMGN,RTX,ANTM,MDLZ,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP,GE,EMN,SLB,ETN,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP,GE,EMN,SLB,ETN,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP,GE,EMN,SLB,ETN,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP,GE,EMN,SLB,ETN,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP,GE,EMN,SLB,ETN,SO,KHC,CL,FIS,AMAT,BAH,SPG,REGN,MMM,GM,FDX,DUK,VLO,EOG,CLX,TWTR,ROP?token=${API_KEY}`
       )
     );
   }, []);
@@ -73,7 +74,7 @@ const Main = () => {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Currency symbol</TableCell>
+                  <TableCell>Currency </TableCell>
                   <TableCell className="Table_text" align="right">
                     close
                   </TableCell>
