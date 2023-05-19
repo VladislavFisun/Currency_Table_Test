@@ -51,7 +51,7 @@ useEffect(()=>{
     return (
         <div className='Main_content'>
             <Paper elevation={3} className='Main_container'>
-              {newData.status==='loading'?<LoadingItem/>
+              {newData.status==='loading'?<div className='Main_loading'><LoadingItem/></div>
               : <TableContainer>
               <Table sx={{ minWidth: 650 }}  aria-label="simple table">
               <TableHead>

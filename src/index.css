@@ -3,5 +3,18 @@
   padding:0;
   box-sizing: border-box;
   font-family:'Roboto', sans-serif;
-  color:rgb(48, 41, 41)
+
+}
+h1{
+  color:#61afef;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: .4s;
+}
+
+h1:hover{
+  color:#e5c07b
 }

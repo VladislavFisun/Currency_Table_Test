@@ -1,7 +1,42 @@
 .Header{
     height:75px;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0px 15px;
     align-items: center;
-    background:rgb(252, 110, 91)
+    background:#282c34
+}
+
+.Header_link{
+    text-decoration: none;
+    cursor:pointer;
+    text-transform: none;
+    color:#e5c07b;
+    font-family:'Roboto', sans-serif;
+    position: relative;
+    transition: .4s;
+    &:after{
+        display: block;
+        content:'';
+        position:absolute;
+        width: 0px;
+        height: 1px;
+        border-radius: 5px;
+        background:rgb(240, 236, 236);
+        bottom: -9%;
+        left: 0%;
+        transition: all .3s;
+        transition: .4s;
+    }
+    &:hover{
+        color:#f0d39e;
+        &:after{
+            width: 100%;
+        }
+    }
+}
+
+@keyframes undelLine {
+  from {width: 0px;}
+  to {width: 100%;}
 }

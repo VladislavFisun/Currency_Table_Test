@@ -2,8 +2,8 @@
 flex:1 0 auto;
 display: flex;
 justify-content: center;
-
 padding: 50px 100px;
+position: relative;
 }
 .Main_container{
     display: flex;
@@ -18,6 +18,11 @@ padding: 50px 100px;
 .Main_List{
 display: flex;
 flex-direction: column;
+
+}
+.Main_loading{
+    position: relative;
+    top: 30%;
 
 }
 .currency_row{
