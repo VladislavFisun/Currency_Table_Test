@@ -2,10 +2,11 @@ import './Main.scss'
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import {useEffect,useState} from 'react'
+ //@ts-ignore
 import { v4 as uuidv4 } from 'uuid';
 import TableCell from '@mui/material/TableCell';
 import { useAppDispatch,useAppSelector } from '../../hooks';
-import { getData, updateCurrentPage } from '../../redux/MainSlice';
+import { getData } from '../../redux/MainSlice';
 import { DragDropContext, Draggable, Droppable, DropResult } from "react-beautiful-dnd"
 import { getRightDate } from '../../utils';
 import { TableBody, TableContainer, TableRow,TableHead,Table} from '@mui/material';
@@ -57,7 +58,7 @@ useEffect(()=>{
               <TableHead>
                       <TableRow>
                         <TableCell>Currency symbol</TableCell>
-                        <TableCell align="right">close</TableCell>
+                        <TableCell className='Table_text' align="right">close</TableCell>
                         <TableCell align="right">high</TableCell>
                         <TableCell align="right">flow</TableCell>
                         <TableCell align="right">fvolume</TableCell>
