@@ -6,7 +6,14 @@ const Header = () => {
       <div>
         <img style={{ width: "50px", height: "50px" }} src={Logo} alt="" />
       </div>
-      <h1>Список Акций</h1>
+      <h1 className="Header_title">
+        <a
+          href="https://iexcloud.io/console/datasets/CORE/HISTORICAL_PRICES"
+          target="_blank"
+        >
+          Список Акций
+        </a>
+      </h1>
       <div>
         <a
           className="Header_link"

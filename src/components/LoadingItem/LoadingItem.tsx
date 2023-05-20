@@ -1,8 +1,8 @@
 const LoadingItem = () => {
   return (
     <img
-      style={{ height: "50%", borderRadius: "15px" }}
-      src="https://media.tenor.com/rtY9m7EokSYAAAAC/cat-loading.gif"
+      style={{ height: "10%", borderRadius: "15px" }}
+      src="https://gifgive.com/wp-content/uploads/2021/09/in-i-yan.gif"
       alt=""
     />
   );

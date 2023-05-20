@@ -34,7 +34,6 @@ const Main = () => {
     })
   );
 
-  console.log(thisPage);
   useEffect(() => {
     dispatch(
       getData(
@@ -69,20 +68,32 @@ const Main = () => {
             <LoadingItem />
           </div>
         ) : (
-          <TableContainer>
+          <TableContainer className="table">
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Currency </TableCell>
-                  <TableCell className="Table_text" align="right">
+                  <TableCell className="table_cell-blue">Currency </TableCell>
+                  <TableCell className="table_cell-blue" align="right">
                     close
                   </TableCell>
-                  <TableCell align="right">high</TableCell>
-                  <TableCell align="right">flow</TableCell>
-                  <TableCell align="right">fvolume</TableCell>
-                  <TableCell align="right">fclose</TableCell>
-                  <TableCell align="right">fhigh</TableCell>
-                  <TableCell align="right">date</TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    high
+                  </TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    flow
+                  </TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    fvolume
+                  </TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    fclose
+                  </TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    fhigh
+                  </TableCell>
+                  <TableCell className="table_cell-blue" align="left">
+                    date
+                  </TableCell>
                 </TableRow>
               </TableHead>
 
@@ -103,6 +114,7 @@ const Main = () => {
                           >
                             {(provided) => (
                               <TableRow
+                                className="table_row"
                                 key={item.id}
                                 sx={{
                                   "&:last-child td, &:last-child th": {
@@ -113,20 +125,52 @@ const Main = () => {
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                               >
-                                <TableCell align="left">
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
                                   {item.symbol}
                                 </TableCell>
-                                <TableCell align="left">{item.close}</TableCell>
-                                <TableCell align="left">{item.high}</TableCell>
-                                <TableCell align="left">{item.flow}</TableCell>
-                                <TableCell align="left">
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
+                                  {item.close}
+                                </TableCell>
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
+                                  {item.high}
+                                </TableCell>
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
+                                  {item.flow}
+                                </TableCell>
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
                                   {item.fvolume}
                                 </TableCell>
-                                <TableCell align="left">
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
                                   {item.fclose}
                                 </TableCell>
-                                <TableCell align="left">{item.fhigh}</TableCell>
-                                <TableCell align="left">
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
+                                  {item.fhigh}
+                                </TableCell>
+                                <TableCell
+                                  className="table_cell-gold"
+                                  align="left"
+                                >
                                   {getRightDate(item.date)}
                                 </TableCell>
                               </TableRow>
