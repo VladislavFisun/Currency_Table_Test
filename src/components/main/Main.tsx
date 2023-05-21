@@ -73,7 +73,7 @@ const Main = () => {
               <TableHead>
                 <TableRow>
                   <TableCell className="table_cell-blue">Currency </TableCell>
-                  <TableCell className="table_cell-blue" align="right">
+                  <TableCell className="table_cell-blue" align="left">
                     close
                   </TableCell>
                   <TableCell className="table_cell-blue" align="left">
